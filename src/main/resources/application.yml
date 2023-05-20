@@ -1,0 +1,15 @@
+server:
+  port: 4000
+spring:
+  profiles:
+    include: secret
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+    messages:
+      encoding: UTF-8
+  logging.level:
+    org.hibernate.SQL: debug
