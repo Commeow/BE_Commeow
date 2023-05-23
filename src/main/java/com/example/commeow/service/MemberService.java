@@ -60,7 +60,7 @@ public class MemberService {
     private void setRefreshToken(Member member, TokenDto tokenDto) {
         //DB에 refreshToken이 있으면 새 토큰으로 업데이트
         //없으면 새로 만들고 DB에 저장
-        refreshTokenRepository.findById(member.getId()).ifPresentOrElse(
+        refreshTokenRepository.findByUserId(member.getUserId()).ifPresentOrElse(
                 refreshToken -> {
                     refreshTokenRepository.save(refreshToken.updateToken(tokenDto.getRefreshToken()));
                 },
