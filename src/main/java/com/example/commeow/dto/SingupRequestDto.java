@@ -12,4 +12,9 @@ public class SingupRequestDto {
 
     @Pattern(regexp = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[$@$!%*?&()_])[A-Za-z\\d$@$!%*?&()_]{8,15}$", message = "{password.pattern}")
     private String password;
+
+    public SingupRequestDto(String userId, String password) {
+        this.userId = userId;
+        this.password = password;
+    }
 }
