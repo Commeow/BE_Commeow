@@ -7,7 +7,7 @@ on:
     branches: [ "main", "dev"]
     
 jobs:
-  build:
+  code-coverage:
   
     runs-on: ubuntu-latest
 
@@ -32,6 +32,7 @@ jobs:
       run: |
         echo "${{secrets.APPLICATION_SECRET_YML}}" | base64 --decode > src/main/resources/application-secret.yml
         find src
+
     - name: Set TEST YML
       run: |
         echo "${{secrets.APPLICATION_TEST_SECRET_YML}}" | base64 --decode > src/test/resources/application-secret.yml
