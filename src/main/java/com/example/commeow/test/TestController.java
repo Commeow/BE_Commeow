@@ -1,4 +1,4 @@
-package com.example.commeow.controller;
+package com.example.commeow.test;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
